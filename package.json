@@ -1,0 +1,10 @@
+{
+  "name": "The_Story_About_Me_And_My_Bestie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true
+}
