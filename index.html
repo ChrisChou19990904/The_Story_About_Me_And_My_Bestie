@@ -145,17 +145,14 @@
     </footer>
 </div>
 <script>
-    // 自動抓取當前頁面的 URL
-    var currentUrl = window.location.href;
-    // Facebook 分享
-    document.getElementsByClassName("fb-share").href =
+    document.querySelector(".fb-share").href =
         "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
-    // Line 分享
-    document.getElementsByClassName("line-share").href =
+
+    document.querySelector(".line-share").href =
         "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
-    // X (Twitter) 分享
-    document.getElementsByClassName("twitter-share").href =
-        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+
+    document.querySelector(".twitter-share").href =
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=The Story About Me and My Confidant";
 
     // 查看更多/更少功能
     document.getElementById('english').addEventListener('click', function() {
