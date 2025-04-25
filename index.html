@@ -13,6 +13,25 @@
         a:active{
             color:orange;
         }
+        .social-share {
+            margin-top: 20px;
+        }
+        .social-share a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .social-share span {
+            margin: 0 5px;
+        }
+        .social-share a#fb-share {
+            color: #4267B2;
+        }
+        .social-share a#line-share {
+            color: #00C300;
+        }
+        .social-share a#twitter-share {
+            color: #1DA1F2;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +74,14 @@
         <video style="margin-left: auto; margin-right: auto; width: 50%;" controls="controls">
             <source src="立定跳遠.mp4" type="video/mp4">
         </video>
+    </div>
+    <!-- 社群分享按鈕區塊 -->
+    <div id="social-share" style="margin-top: 20px;">
+        <a id="fb-share" href="#" target="_blank" style="text-decoration: none; color: #4267B2; font-weight: bold;">Share to Facebook</a>
+        <span> | </span>
+        <a id="line-share" href="#" target="_blank" style="text-decoration: none; color: #00C300; font-weight: bold;">Share to Line</a>
+        <span> | </span>
+        <a id="twitter-share" href="#" target="_blank" style="text-decoration: none; color: #1DA1F2; font-weight: bold;">Share to X</a>
     </div>
     </p>
     <hr>
@@ -100,6 +127,14 @@
             <source src="立定跳遠.mp4" type="video/mp4">
         </video>
     </div>
+    <!-- 社群分享按鈕區塊 -->
+    <div class="social-share" style="margin-top: 20px;">
+        <a class="fb-share" href="#" target="_blank" style="text-decoration: none; color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+        <span> | </span>
+        <a class="line-share" href="#" target="_blank" style="text-decoration: none; color: #00C300; font-weight: bold;">分享到 Line</a>
+        <span> | </span>
+        <a class="twitter-share" href="#" target="_blank" style="text-decoration: none; color: #1DA1F2; font-weight: bold;">分享到 X</a>
+    </div>
     </p>
     <hr>
     <footer style="text-align: center; background-color: purple; color:yellow; font-size: 50px">
@@ -110,6 +145,19 @@
     </footer>
 </div>
 <script>
+    // 自動抓取當前頁面的 URL
+    var currentUrl = window.location.href;
+    // Facebook 分享
+    document.getElementsByClassName("fb-share").href =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+    // Line 分享
+    document.getElementsByClassName("line-share").href =
+        "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+    // X (Twitter) 分享
+    document.getElementsByClassName("twitter-share").href =
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+
+    // 查看更多/更少功能
     document.getElementById('english').addEventListener('click', function() {
         document.getElementById('englishContent').classList.remove('hidden');
         document.getElementById('chineseContent').classList.add('hidden');
