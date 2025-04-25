@@ -145,14 +145,33 @@
     </footer>
 </div>
 <script>
-    document.querySelector(".fb-share").href =
+    // 取得當前網址
+    const currentUrl = window.location.href;
+
+    // Facebook 分享
+    document.getElementsByClassName("fb-share")[0].href =
         "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
 
-    document.querySelector(".line-share").href =
+    // Line 分享
+    document.getElementsByClassName("line-share")[0].href =
         "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
 
-    document.querySelector(".twitter-share").href =
+    // X (Twitter) 分享
+    document.getElementsByClassName("twitter-share")[0].href =
         "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=The Story About Me and My Confidant";
+
+    // Facebook 分享
+    document.getElementsByClassName("fb-share")[1].href =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+
+    // Line 分享
+    document.getElementsByClassName("line-share")[1].href =
+        "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+
+    // X (Twitter) 分享
+    document.getElementsByClassName("twitter-share")[1].href =
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=The Story About Me and My Confidant";
+
 
     // 查看更多/更少功能
     document.getElementById('english').addEventListener('click', function() {
