@@ -186,6 +186,21 @@
         document.title = '我和我知己的故事';
     });
 
+    document.getElementById('english').addEventListener('click', function () {
+        document.getElementById('englishContent').style.display = 'block';
+        document.getElementById('chineseContent').style.display = 'none';
+    });
+
+    document.getElementById('chinese').addEventListener('click', function () {
+        document.getElementById('englishContent').style.display = 'none';
+        document.getElementById('chineseContent').style.display = 'block';
+    });
+
+    // 預設顯示英文內容
+    document.getElementById('englishContent').style.display = 'block';
+    document.getElementById('chineseContent').style.display = 'none';
+
+
 </script>
 
 <style>
